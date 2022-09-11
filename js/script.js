@@ -114,11 +114,11 @@ function generateTags() {
       //console.log(tag);
 
       /* [DONE] generate HTML of the link */
-      const LinkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
-      //console.log('tagLinkHTML', LinkHTML);
+      const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
+      //console.log('tagLinkHTML', linkHTML);
 
       /* [DONE] add generated code to html variable */
-      html = html + ' ' + LinkHTML;
+      html = html + ' ' + linkHTML;
 
     /* [DONE] END LOOP: for each tag */
     }
@@ -157,7 +157,7 @@ function tagClickHandler(event) {
   }
 
   /* [DONE] find all tag links with "href" attribute equal to the "href" constant */
-  const tagLinks = document.querySelectorAll('tagLinks');
+  const tagLinks = document.querySelectorAll('a[href="' + href + '"]');
 
   /* [DONE] START LOOP: for each found tag link */
   for (let tagLink of tagLinks) {
